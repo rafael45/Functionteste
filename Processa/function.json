@@ -1,11 +1,16 @@
-module.exports = async function (context, req) {
-    context.res = {
-        status: 200,
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: {
-            message: "Olá, Rodrigo, Deus te abençoe."
-        }
-    };
-};
+{
+  "bindings": [
+    {
+      "authLevel": "function",  // ou "anonymous" se quiser acesso sem chave
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [ "get" ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
