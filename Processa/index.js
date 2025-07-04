@@ -1,6 +1,11 @@
 module.exports = async function (context, req) {
     context.res = {
         status: 200,
-        body: "Hello from Azure Function in Node.js 22!"
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: {
+            message: "Olá, Rodrigo, Deus te abençoe."
+        }
     };
 };
