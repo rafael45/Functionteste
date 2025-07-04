@@ -1,7 +1,7 @@
 {
   "bindings": [
     {
-      "authLevel": "function",
+      "authLevel": "function",  // ou "anonymous" se quiser acesso sem chave
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
