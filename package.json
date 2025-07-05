@@ -1,9 +1,0 @@
-{
-  "name": "azure-function-node",
-  "name": "functionteste",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "func start"
-  }
-}
