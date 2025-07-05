@@ -1,14 +1,19 @@
-{
-  "name": "meu-projeto",
-  "version": "1.0.0",
-  "description": "Um projeto incrível criado com Node.js",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
-  "author": "Rafael",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+import {
+  app,
+  HttpRequest,
+  HttpResponseInit,
+  InvocationContext,
+} from "@azure/functions";
+
+async function helloWorld1(
+  request: HttpRequest,
+  context: InvocationContext
+): Promise<HttpResponseInit> {
+  context.log("Http function was triggered.");
+  return { body: "Hello, world!" };
 }
+
+app.http("helloWorld1", {
+  methods: ["GET", "POST"],
+  handler: helloWorld1,
+});
