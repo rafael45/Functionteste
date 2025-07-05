@@ -1,9 +1,14 @@
 {
-  "name": "azure-function-node",
-  "name": "functionteste",
+  "name": "meu-projeto",
   "version": "1.0.0",
+  "description": "Um projeto incrível criado com Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "func start"
-  }
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Rafael",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
 }
