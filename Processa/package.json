@@ -1,8 +1,10 @@
-const { app } = require('@azure/functions');
+import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
+
+async function helloWorld1(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
+    ...
+};
 
 app.http('helloWorld1', {
     route: 'hello/world',
-    handler: async (request, context) => {
-        ...
-    }
+    handler: helloWorld1
 });
