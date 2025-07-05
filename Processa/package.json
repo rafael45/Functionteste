@@ -1,19 +1,9 @@
-import {
-  app,
-  HttpRequest,
-  HttpResponseInit,
-  InvocationContext,
-} from "@azure/functions";
-
-async function helloWorld1(
-  request: HttpRequest,
-  context: InvocationContext
-): Promise<HttpResponseInit> {
-  context.log("Http function was triggered.");
-  return { body: "Hello, world!" };
-}
+const { app } = require("@azure/functions");
 
 app.http("helloWorld1", {
-  methods: ["GET", "POST"],
-  handler: helloWorld1,
+  methods: ["POST", "GET"],
+  handler: async (request, context) => {
+    context.log("Http function was triggered.");
+    return { body: "Hello, world!" };
+  },
 });
