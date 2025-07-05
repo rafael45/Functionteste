@@ -1,16 +1,17 @@
 {
-  "bindings": [
-    {
+"bindings": [
+{
+      "authLevel": "function",  // ou "anonymous" se quiser acesso sem chave
       "authLevel": "function",
-      "type": "httpTrigger",
-      "direction": "in",
-      "name": "req",
-      "methods": [ "get" ]
-    },
-    {
-      "type": "http",
-      "direction": "out",
-      "name": "res"
-    }
-  ]
+"type": "httpTrigger",
+"direction": "in",
+"name": "req",
+"methods": [ "get" ]
+},
+{
+"type": "http",
+"direction": "out",
+"name": "res"
+}
+]
 }
