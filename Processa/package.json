@@ -1,10 +1,7 @@
-import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-
-async function helloWorld1(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
-    ...
-};
-
-app.http('helloWorld1', {
-    route: 'hello/world',
-    handler: helloWorld1
-});
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node"
+  }
+}
