@@ -5,7 +5,5 @@
   "scripts": {
     "test": "node test.js"
   },
-  "dependencies": {
-    // aqui vão suas libs, se tiver
-  }
+  "dependencies": {}
 }
